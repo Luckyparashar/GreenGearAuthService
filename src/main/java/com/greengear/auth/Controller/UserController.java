@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.greengear.auth.Dto.CustomUserPrincipal;
 import com.greengear.auth.Dto.UserReviewDTO;
-import com.greengear.auth.Service.UserService;
+import com.greengear.auth.service.UserService;
 
 import lombok.AllArgsConstructor;
 

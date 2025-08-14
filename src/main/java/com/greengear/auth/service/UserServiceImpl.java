@@ -1,4 +1,4 @@
-package com.greengear.auth.Service;
+package com.greengear.auth.service;
 
 import java.util.List;
 
@@ -51,6 +51,7 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public AuthResp signIn(SignInDTO dto) {
+		
 		Authentication authToken=	new
 				UsernamePasswordAuthenticationToken(dto.getEmail(),
 						dto.getPassword());

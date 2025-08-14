@@ -1,4 +1,4 @@
-package com.greengear.auth.Service;
+package com.greengear.auth.service;
 
 import java.util.List;
 

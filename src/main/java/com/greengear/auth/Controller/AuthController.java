@@ -14,7 +14,7 @@ import com.greengear.auth.Dto.AuthResp;
 import com.greengear.auth.Dto.SignInDTO;
 import com.greengear.auth.Dto.UserReqDTO;
 import com.greengear.auth.Security.JwtUtils;
-import com.greengear.auth.Service.UserService;
+import com.greengear.auth.service.UserService;
 
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
@@ -41,28 +41,7 @@ private final UserService userService;
 @Operation(description = "User sign in ")
 public ResponseEntity<?> userSignIn(@RequestBody SignInDTO dto) {
 	System.out.println("in sign in "+dto);
-	//1. invoke AuthenticationMgr's authenticate method
-	/*
-	 * API
-	 * 1.1 Authentication authenticate(Authentication auth) 
-	 * throws AuthenticationException
-	 * i/p - not yet verified credentails
-	 * o/p - verified credentials
-	 * 1.2 Authentication : i/f
-	 * Implemented by UserNamePasswordAuthenticationToken
-	 * (String userName|email,String password) 
-	 * 
-	 */
-//	Authentication authToken=	new
-//	UsernamePasswordAuthenticationToken(dto.getEmail(),
-//			dto.getPassword());
-//	System.out.println("before - "+authToken.isAuthenticated());//false
-//	Authentication validAuth = 
-//			authenticationManager.authenticate(authToken);
-//	//=> success
-//	System.out.println("after - "+validAuth.isAuthenticated());//true
-//	System.out.println(validAuth);//user details : UserEntity
-	//2. Create signed JWT n send it in the response.
+	
 	
 	return ResponseEntity.status(HttpStatus.CREATED)//SC 201
 			.body(userService.signIn(dto));
